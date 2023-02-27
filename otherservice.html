@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zxx" class="uk-background-white dark:uk-background-gray-100 dark:uk-text-gray-20 uk-dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nerko</title>
+        <meta name="description" content="NFT Marketplace Template">
+        <meta name="theme-color" content="#741ff5">
+
+        <!-- preload head styles -->
+        <link rel="preload" href="./assets/fonts/brand-icons/brand-icons.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="./assets/fonts/unicons/Unicons.woff?lkolxg" as="font" type="font/woff" crossorigin>
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.css" as="style">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/css/uikit.min.css" as="style">
+
+        <!-- <link rel="preload" href="./assets/css/theme/main.min.css" as="style"> -->
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="./assets/js/uikit.min.js" as="script">
+        <link rel="preload" href="./assets/js/uikit-components.js" as="script">
+        <link rel="preload" href="./assets/js/jquery.min.js" as="script">
+        <link rel="preload" href="./assets/js/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="./assets/js/feather.min.js" as="script">
+        <link rel="preload" href="./assets/js/typed.min.js" as="script">
+        <link rel="preload" href="./assets/js/anime.min.js" as="script">
+        <link rel="preload" href="./assets/js/app.js" as="script">
+        <link rel="preload" href="./assets/js/swiper-helper.js" as="script">
+        <link rel="preload" href="./assets/js/typed-helper.js" as="script">
+        <link rel="preload" href="./assets/js/anime-helper.js" as="script">
+        <link rel="preload" href="./assets/js/anime-helper-defined-timelines.js" as="script">
+
+        <!-- include styles -->
+        <script src="./assets/js/app-head.js"></script>
+        <link rel="stylesheet" href="./assets/css/theme/main.min.css">
+
+        <!-- include scripts -->
+        <script src="./assets/js/uikit.min.js"></script>
+        <script src="./assets/js/uikit-components.js"></script>
+    </head>
+    <body class="uni-body">
+
+        <!-- Dark/Light toggle -->
+
+        <!-- Dark/Light toggle -->
+        <div class="darkmode-trigger uk-position-bottom-right uk-position-small uk-position-fixed uk-box-shadow-large uk-radius-circle" data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- Menu modal -->
+        <div id="uni_mobile_menu" class="uni-mobile-menu uk-offcanvas" data-uk-offcanvas="mode: push; overlay: true; flip: true; selPanel: .uk-offcanvas-bar-panel;">
+            <div class="uk-offcanvas-bar-panel uk-panel dark:uk-background-gray-100">
+                <div class="uni-mobile-menu-wrap uk-flex-column uk-flex-between" data-uk-height-viewport="offset-bottom: true;">
+                    <div class="uni-mobile-menu-content">
+                        <header class="uk-card uk-card-2xsmall uk-flex-middle uk-flex-between">
+                            <div class="uk-flex-1">
+                                <button aria-label="Close Menu" class="uk-offcanvas-close uk-button uk-button-small uk-button-icon uk-button-default uk-button-outline uk-radius-circle" type="button">
+                                    <i class="uk-icon-small" data-feather="arrow-left"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <h5 class="uk-h5 uk-text-uppercase uk-margin-remove">Navigation</h5>
+                            </div>
+                            <div class="uk-flex-1"></div>
+                        </header>
+                        <hr class="uk-margin-remove">
+                        <div class="uk-card uk-card-small">
+                            <div class="uk-panel">
+                                <ul class="uk-nav uk-nav-default">
+                                    <li class="uk-nav-header">Homepages</li>
+                                    <li><a href="landing-01.html">Landing 01</a></li>
+                                    <li><a href="landing-02.html">Landing 02</a></li>
+                                    <li><a href="landing-03.html">Landing 03</a></li>
+                                    <li><a href="landing-04.html">Landing 04</a></li>
+                                    <li><a href="landing-05.html">Landing 05</a></li>
+                                    <li class="uk-nav-header">Inner pages</li>
+                                    <li><a href="base.html">Base components</a></li>
+                                    <li><a href="connect-wallet.html">Connect wallet</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="404.html">404 page</a></li>
+                                    <li><a href="coming-soon.html">Coming soon</a></li>
+                                    <li class="uk-nav-header">Content &amp; Privacy</li>
+                                    <li><a href="terms.html">Terms of use</a></li>
+                                    <li><a href="privact.html">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connect wallet modal -->
+        <div id="uni_connect_wallet" class="uk-modal-full" data-uk-modal>
+            <div class="uk-modal-dialog">
+                <div class="uk-position-top uk-position-z-index-negative" data-uk-height-viewport="">
+                    <div class="uk-position-cover uk-background-cover uk-opacity-10 dark:uk-hidden" data-src="./assets/images/gradient-01.png" data-uk-img></div>
+                    <div class="uk-position-cover uk-background-cover uk-opacity-20 uk-hidden dark:uk-visible" data-src="./assets/images/gradient-01.png" data-uk-img></div>
+                </div>
+                <button class="uk-modal-close-full uk-close-large uk-position-small" type="button" data-uk-close></button>
+                <div class="uk-container">
+                    <div class="uk-grid uk-flex-center uk-flex-middle uk-child-width-1-2@m uk-section" data-uk-grid data-uk-height-viewport>
+                        <div>
+                            <div class="uk-panel uk-text-center">
+                                <h2 class="uk-h5 uk-h3@s uk-h2@l uk-margin-remove">Connect your wallet</h2>
+                                <div class="uk-grid uk-grid-xsmall uk-grid-small@m uk-child-width-1-2@m uk-margin-medium-top uk-margin-large-top@m" data-uk-grid="">
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#metamask" class="uk-position-cover"></a>
+                                            <img src="./assets/images/icon-metamask.svg" alt="metamask">
+                                            <h4 class="uk-text-bold uk-h5@m uk-margin-small-top uk-margin-medium-top@m">Metamask</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#bitgo" class="uk-position-cover"></a>
+                                            <img src="./assets/images/icon-bitgo.svg" alt="bitgo">
+                                            <h4 class="uk-text-bold uk-h5@m uk-margin-small-top uk-margin-medium-top@m">BitGo</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#trustwallet" class="uk-position-cover"></a>
+                                            <img src="./assets/images/icon-trustwallet.svg" alt="trustwallet">
+                                            <h4 class="uk-text-bold uk-h5@m uk-margin-small-top uk-margin-medium-top@m">Trust Wallet</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#coinbase" class="uk-position-cover"></a>
+                                            <img src="./assets/images/icon-coinbase.svg" alt="coinbase">
+                                            <h4 class="uk-text-bold uk-h5@m uk-margin-small-top uk-margin-medium-top@m">Coinbase</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrapper start -->
+        <div class="wrap uk-overflow-hidden">
+    <!-- Header start -->
+            <header class="uni-header">
+                <div class="uni-header-navbar" data-uk-sticky="top: 70; show-on-up: false; animation: uk-animation-slide-top" data-anime="opacity:[0, 1]; translateY:[-24, 0]; onview: true; delay: 0;">
+                    <div class="uk-container">
+                        <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+                            <div class="uk-navbar-top">
+                                <div class="uk-navbar-left">
+                                    <a class="uk-logo uk-navbar-item uk-h4 uk-h3@m uk-margin-remove" href="landing-01.html"> <img class="uk-visible dark:uk-hidden" width="120" src="./assets/images/hero-image.jpg" alt="Nerko" loading="lazy"> <img class="uk-hidden dark:uk-visible" width="120" src="./assets/images/hero-image.jpg" alt="Nerko" loading="lazy"> </a>
+                                </div>
+
+                                <div class="uk-navbar-right uk-flex-1 uk-flex-right">
+                                    <ul class="uk-navbar-nav dark:uk-text-gray-10 uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80" data-uk-navbar-bound>
+                                        <li><a href="bookmeeting.html">Book A Meeting</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="otherservice.html">Other Services</a></li>
+                                      
+                                    </ul>
+                                    <div class="uk-navbar-item">
+                                        <!-- <ul class="uk-subnav uk-subnav-small uk-visible@m">
+                                            <li>
+                                                <a href="https://twitter.com/unistudioco"><i class="uk-icon unicon-logo-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://discord.com/unistudioco"><i class="uk-icon unicon-logo-discord"></i></a>
+                                            </li>
+                                        </ul> -->
+
+                                        <!-- header: call to actions -->
+                                        <a href="#uni_connect_wallet" class="uk-button uk-button-medium@m uk-button-default uk-button-outline uk-margin-left uk-visible@l" data-uk-toggle="">
+                                            <span>Socials</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="uk-navbar-item uk-hidden@m">
+                                        <a href="#uni_connect_wallet" class="uk-button uk-button-medium@m uk-button-icon uk-hidden@m uk-margin-small-right" data-uk-toggle="">
+                                            <i class="uk-icon unicon-wallet"></i>
+                                        </a>
+                                        <a href="#uni_mobile_menu" data-uk-toggle>
+                                            <span class="uk-icon uk-icon-medium material-icons">menu</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- Header end -->
+            <div id="uni_hero" class="uni-hero uk-section uk-section-xlarge uk-padding-remove-bottom uk-panel">
+                <div class="uk-position-top uk-position-z-index-negative uk-overflow-hidden uk-blend-overlay" data-uk-height-viewport="" style="min-height: calc(100vh);">
+                    <img class="uk-position-top-left uk-position-fixed uk-blur-large" style="left: -4%; top: -4%" width="500" src="../assets/images/gradient-circle.svg" alt="Circle">
+                    <img class="uk-position-bottom-right uk-position-fixed uk-blur-large" style="right: -4%; bottom: -4%" width="500" src="../assets/images/gradient-circle.svg" alt="Circle">
+                </div>
+                <div class="uk-position-top uk-position-z-index-negative" data-uk-height-viewport="" style="min-height: calc(100vh);">
+                    <div class="uk-position-cover uk-background-cover uk-opacity-10 dark:uk-hidden" data-src="../assets/images/gradient-01.png" data-uk-img="" style="background-image: url(&quot;https://unistudio.co/html/nerko/assets/images/gradient-01.png&quot;);"></div>
+                    <div class="uk-position-cover uk-background-cover uk-opacity-20 uk-hidden dark:uk-visible" data-src="../assets/images/gradient-01.png" data-uk-img=""></div>
+                </div>
+                <div class="uk-panel uk-position-z-index">
+                    <div class="uk-container">
+                        <div class="uk-panel">
+                            <div class="uk-grid uk-grid-2xlarge uk-flex-middle uk-flex-between uk-grid-stack" data-uk-grid="" data-uk-height-viewport="offset-top: true; offset-bottom: 20;" style="min-height: calc((100vh - 80px) - 20vh);">
+                                <div class="uk-width-5-12@m uk-first-column">
+                                    <div class="uk-panel uk-position-z-index uk-text-center uk-text-left@m" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;" style="opacity: 1; transform: translateY(0px);">
+                                        <img class="uk-position-top-left" width="44" src="../assets/images/objects/ethereum-01.png" alt="object" style="top: -20%; left: 50%; opacity: 1; transform: scale(1);" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 400;">
+                                        <img class="uk-position-left" width="16" src="../assets/images/objects/circle-01.png" alt="object" style="top: 16%; left: -16%; opacity: 1; transform: scale(1);" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 420;">
+                                        <img class="uk-position-bottom-left" width="24" src="../assets/images/objects/circle-03.png" alt="object" style="bottom: -16%; left: 16%; opacity: 1; transform: scale(1);" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 440;">
+                                        <h2 class="uk-h2 uk-heading-d3@m uk-margin-small uk-margin@m">Supercharge your NFT Adventure</h2>
+                                        <p class="uk-text-xlarge uk-width-xlarge@m uk-text-muted">Find the right NFT collections to buy within the platform.</p>
+                                        <a href="#" class="uk-button uk-button-medium@m uk-button-gradient uk-margin-small-top">
+                                            <span>View in OPENSEA</span>
+                                            <i class="uk-icon-small unicon-arrow-right uk-text-bold"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="uk-width-6-12@m uk-flex-center uk-grid-margin uk-first-column">
+                                    <div class="uk-panel" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 200;" style="opacity: 1; transform: translateY(0px);">
+                                        <img class="uk-position-left uk-text-primary" width="44" src="../assets/images/objects/bitcoin-01.png" alt="object" style="top: 75%; left: -20%; opacity: 1; transform: scale(1);" data-uk-svg="" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 460;">
+                                        <img class="uk-position-right" width="28" src="../assets/images/objects/x.png" alt="object" style="top: -4%; right: 16%; opacity: 1; transform: scale(1);" data-uk-svg="" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 480;">
+                                        <img class="uk-position-right uk-opacity-10" width="300" src="../assets/images/blob-dashed.svg" alt="Blog dashed" style="top: -10%; right: 16%; fill: transparent" data-uk-svg="" hidden=""><svg width="300" fill="none" xmlns="http://www.w3.org/2000/svg" style="top: -10%; right: 16%; fill: transparent" class="uk-position-right uk-opacity-10 uk-svg"><path d="M136.029 16.662c12.416 8.85 20.086 22.228 29.337 35.08 9.374 12.851 20.33 25.281 19.599 37.396-.608 12.114-12.903 23.807-22.155 36.869-9.252 13.063-15.338 27.284-27.147 38.872-11.686 11.482-29.094 20.12-46.502 20.12-17.407.105-34.815-8.638-51.128-17.803-16.434-9.27-31.772-18.961-35.79-32.024-4.138-12.957 3.044-29.39 7.061-43.717 4.14-14.22 5.235-26.546 8.157-41.188 3.043-14.643 8.156-31.603 20.45-40.452C50.086.861 69.685.018 88.067 1.704c18.26 1.79 35.546 6.11 47.963 14.958z" stroke="#0F051D" stroke-miterlimit="3.971" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"></path></svg>
+                                        <svg style="top: -20%" class="uk-position-right uk-opacity-30" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#F796FF" d="M47.5,-67.2C55.9,-59.3,53.2,-37.9,56.7,-20.1C60.2,-2.3,69.9,11.8,70.8,27.3C71.7,42.9,63.8,59.9,50.6,64.4C37.3,68.9,18.6,60.8,-0.3,61.2C-19.3,61.6,-38.6,70.7,-53.5,66.7C-68.4,62.8,-78.9,45.9,-78.8,29.5C-78.7,13.2,-67.9,-2.7,-59.8,-16.8C-51.6,-31,-46,-43.3,-36.5,-50.9C-27,-58.4,-13.5,-61.1,3,-65.2C19.6,-69.4,39.1,-75.1,47.5,-67.2Z" transform="translate(100 100)">
+                                        </path></svg>
+                                        <div class="uk-grid uk-grid-xsmall uk-child-width-1-2 uk-flex-top uk-flex-wrap-top" data-uk-grid="masonry: true;" style="height: 231px;">
+                                            <div class="uk-first-column" style="transform: translateY(0px);">
+                                                <div class="uni-item uk-card uk-overflow-hidden uk-radius uk-radius-large@m uk-box-shadow-hover-medium uk-visible-toggle uk-transition-toggle uk-box-shadow-medium uk-background-white dark:uk-background-white-5">
+                                                    <div class="uni-item-featured-image uk-panel uk-flex-middle uk-flex-center">
+                                                        <div class="uk-panel uk-image-middle">
+                                                            <img src="../assets/images/artwork/05.jpg" alt="Artwork" class="uk-radius-small uk-radius-large@m">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin-large-top" style="transform: translateY(0px);">
+                                                <div class="uni-item uk-card uk-overflow-hidden uk-radius uk-radius-large@m uk-box-shadow-hover-medium uk-visible-toggle uk-transition-toggle uk-box-shadow-medium uk-background-white dark:uk-background-white-5">
+                                                    <div class="uni-item-featured-image uk-panel uk-flex-middle uk-flex-center">
+                                                        <div class="uk-panel uk-image-middle">
+                                                            <img src="../assets/images/artwork/13.jpg" alt="Artwork" class="uk-radius-small uk-radius-large@m">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="uni-circle-text uk-background-white dark:uk-background-gray-80 uk-box-shadow-large uk-visible@m" href="#view_in_opensea">
+                                            <svg class="uni-circle-text-path uk-text-secondary uni-animation-spin" viewBox="0 0 100 100" width="120" height="120">
+                                                <defs>
+                                                    <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0">
+                                                </path></defs>
+                                                <text font-size="11.75">
+                                                    <textPath xlink:href="#circle">view in opensea • view in opensea •</textPath>
+                                                </text>
+                                            </svg>
+                                            <i class="uk-position-center uk-text-secondary uk-icon-medium@m unicon-arrow-up-right uk-text-bold"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uni-brands uk-padding-3xlarge-top uk-padding-medium-bottom uk-padding-remove-top@m uk-padding-xlarge-bottom@m uk-panel uk-overflow-hidden" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 300;" style="opacity: 1; transform: translateY(0px);">
+                <div class="uk-container uk-container-small">
+                    <div class="uk-panel uk-text-center dark:uk-text-white">
+                        <header class="uk-panel uk-flex-center uk-flex-middle uk-text-center">
+                            <span class="uk-text-overline uk-text-bold uk-text-muted">Powered by amazing investors:</span>
+                        </header>
+                        <div class="uk-grid uk-grid-xlarge@m uk-child-width-1-2 uk-child-width-expand@m uk-flex-middle uk-flex-center uk-grid uk-margin-medium-top" data-uk-grid="">
+                            <div class="uk-first-column"><img class="uk-width-xsmall" src="../assets/images/wallets/wallet-01.svg" alt="Metamask" data-uk-svg="" hidden=""><svg width="253" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="uk-width-xsmall uk-svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.84 16.102L.153 7.821 2.761.153 19.17 6.288h13.495L48.922.266l.152-.113.017.05.136-.05-.123.09 2.577 7.578-1.687 8.281 1.227.767-1.687 1.227 1.227.92-1.687 1.534 1.073.613-2.3 2.76 3.527 10.889h-9.355l-3.221.078 3.068.075-5.237 7.78.023.195-6.288 2.913v-1.84l-.613-4.447 5.855-4.505-.023-.21-.004.114-5.91 4.546.082.055.46 4.447-.46-.46h-7.668l-.257.257-.025.178.283-.282h7.667l.46.46v1.84l6.44-3.066-2.146 1.84-4.6 3.067h-7.822l-4.447-3.068-2.3-1.84 6.287 3.067v-.073l-6.288-2.994.907-7.849-.015-.029-.892 7.878-11.501 3.22-3.22-11.194 9.354-.154.1.151 3.045-.074-3.145-.076H.613l3.492-10.778-2.265-2.718 1.074-.767-1.687-1.533 1.227-.92-1.687-1.227 1.073-.767zm9.662 9.508l11.186.454.008.154-11.115-.451-.079-.157zm17.175 4.294v9.023l.307-12.703 1.074 5.826.145-.042.034-.01 5.495-1.634-.148 4.448.152.003.149-4.45-3.987-1.84-.028.057-.126-.058-1.575 3.295-1.031-5.595 11.193-.454.154-.16-3.214-4.745 3.062 4.899-11.349.46-.001.01-.306 3.67zm-12.426 5.06h.005l-.004.036-.001-.035zm0-.121l.005.122-.006-.01-.002-.078.004-.035zm-4.586-8.91l-.005-.012 4.443 4.443.148 4.448h-.005l-.143-4.294-4.438-4.586zm4.438 4.431l3.987-1.84 1.687 3.527-5.674-1.687zM29.909 14.35l9.077-6.67-9.014 6.725-.063-.055zm-7.672 25.217l-6.898 3.372 6.865-3.134.032-.238z" fill="#F5841F"></path><path d="M36.652 42.94l5.367-8.128 9.354.153-3.22 11.195-11.501-3.22z" fill="#F5841F"></path><path d="M78.943 12.268h-3.22s-.154 0-.154.154l-2.76 9.048c0 .153-.154.153-.307 0l-2.76-9.048s0-.154-.154-.154h-4.754s-.153 0-.153.154v23.003s0 .153.153.153h3.374s.153 0 .153-.153V17.789c0-.153.153-.153.307 0l2.76 9.048.154.614s0 .153.153.153h2.607s.153 0 .153-.153l.154-.614 2.76-9.048c0-.153.307-.153.307 0v17.483s0 .153.153.153h3.374s.153 0 .153-.153V12.268s0-.153-.153-.153h-2.3v.153zm13.981 19.63v-7.055s0-.153.153-.153h8.894s.154 0 .154-.153v-2.914s0-.153-.154-.153h-8.894s-.153 0-.153-.154v-6.134s0-.153.153-.153h10.121s.154 0 .154-.154v-2.607s0-.153-.154-.153H89.55s-.154 0-.154.153v22.697s0 .153.154.153h13.955s.153 0 .153-.153v-3.067s0-.154-.153-.154l-10.581.154zm34.53-19.783h-15.642s-.154 0-.154.153v2.914s0 .153.154.153h6.134v19.937s0 .153.153.153h3.374s.153 0 .153-.153V15.335h6.135s.153 0 .153-.153l-.46-3.067zm22.569 23.31h3.067c.153 0 .153-.153.153-.153l-6.288-23.004s0-.153-.153-.153h-4.447s-.154 0-.154.153l-6.287 23.004c0 .153 0 .153.153.153h3.067s.154 0 .154-.153l1.84-6.748s0-.153.153-.153h6.748s.153 0 .153.153l1.841 6.9c-.154 0-.154 0 0 0zm-7.975-10.121l2.454-8.895c0-.153.153-.153.306 0l2.454 8.895c0 .153 0 .153-.153.153h-4.908c-.153 0-.153-.154-.153-.154zm30.39-13.036c-.154 0-.154 0 0 0l-2.914 9.048c0 .154-.153.154-.307 0l-2.76-9.048s0-.153-.153-.153h-4.908s-.153 0-.153.153v23.004s0 .153.153.153h3.374s.153 0 .153-.153V17.789c0-.153.154-.153.307 0l2.761 9.048.153.614s0 .153.153.153h2.607s.154 0 .154-.153l.153-.614 2.76-9.048c0-.153.307-.153.307 0v17.483s0 .153.153.153h3.374s.154 0 .154-.153V12.268s0-.153-.154-.153h-5.367v.153zm27.629 23.157h3.067c.154 0 .154-.153.154-.153L197 12.268s0-.153-.153-.153H192.4s-.154 0-.154.153l-6.287 23.004c0 .153 0 .153.153.153h3.067s.153 0 .153-.153l1.841-6.748s0-.153.153-.153h6.748s.153 0 .153.153l1.84 6.9zm-7.821-10.121l2.454-8.895c0-.153.153-.153.307 0l2.453 8.895c0 .153 0 .153-.153.153H192.4c-.154 0-.154-.154-.154-.154zm31.003-1.074c-1.38-.92-2.913-1.534-4.294-2.3-.92-.46-1.84-.92-2.76-1.687-1.38-1.074-1.073-3.374.307-4.294 1.993-1.38 5.367-.614 5.827 2.147 0 0 0 .153.154.153h3.067c.153 0 .153 0 .153-.153-.153-1.84-.92-3.527-2.3-4.447-1.227-.92-2.761-1.534-4.294-1.534-8.128 0-8.895 8.588-4.448 11.195.461.307 4.754 2.454 6.288 3.374 1.534.92 1.994 2.607 1.38 3.987-.613 1.227-2.147 2.147-3.68 1.993-1.687-.153-3.067-1.073-3.527-2.453-.154-.307-.154-.767-.154-.92 0 0 0-.154-.153-.154h-3.374s-.153 0-.153.154c0 2.453.613 3.68 2.3 4.907 1.534 1.227 3.22 1.687 4.907 1.687 4.601 0 6.901-2.607 7.361-5.214.46-2.607-.306-4.907-2.607-6.441zm28.984 10.888L240.731 23.31v-.153l10.429-10.735c.153-.154 0-.154-.154-.154h-4.447l-8.741 9.048c-.154.154-.154 0-.154-.153v-8.895s0-.153-.153-.153h-3.374s-.153 0-.153.153v23.004s0 .153.153.153h3.374s.153 0 .153-.153V25.15c0-.153.154-.153.154-.153l9.968 10.275h4.447s.153-.154 0-.154z" fill="#222"></path></svg></div>
+                            <div><img class="uk-width-xsmall" src="../assets/images/wallets/wallet-02.svg" alt="BitGo" data-uk-svg="" hidden=""><svg width="163" height="41" fill="none" xmlns="http://www.w3.org/2000/svg" class="uk-width-xsmall uk-svg"><path d="M17.073 25.678c1.6.026 5.079.082 5.104-2.15.024-2.31-3.435-2.238-5.06-2.205-.167.003-.315.006-.438.006v4.345c.112 0 .245.002.395.004zm-.13-6.326c1.29.044 4.323.146 4.348-1.938.025-2.113-2.857-2.048-4.216-2.017-.141.003-.266.006-.369.006v3.942l.237.008z" fill="#009FE8"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M35.209 13.74c0 21.4-17.135 27.219-17.135 27.219S.938 35.139.938 13.74V6.045c0-.832.644-1.529 1.475-1.582 3.111-.135 10.485-.778 15.66-3.54 5.176 2.762 12.55 3.405 15.661 3.54.831.053 1.475.75 1.475 1.582v7.696zm-14.963-.562c2.547.24 4.532 1.045 4.746 3.378.161 1.717-.563 2.735-1.716 3.272 1.877.456 3.03 1.609 2.789 4.103-.322 3.11-2.628 3.941-5.953 4.102v3.272h-1.985v-3.218c-.51 0-1.046 0-1.582-.027v3.245h-1.957v-3.272c-.456-.026-3.594 0-3.594 0l.027-2.386h2.226V15.216h-2.52V13.15s3.539-.027 3.968-.027l-.027-3.245h1.984v3.191h1.61V9.906h1.984v3.272z" fill="#009FE8"></path><path d="M69.504 27.94c0 1.716-.349 3.137-1.019 4.29a8.098 8.098 0 01-2.682 2.789c-1.126.697-2.386 1.207-3.807 1.529a21.596 21.596 0 01-4.371.455H45.209V5.817h12.416c1.206 0 2.44.134 3.7.375 1.26.242 2.414.67 3.433 1.287a7.82 7.82 0 012.52 2.44c.644 1.02.966 2.333.966 3.916 0 1.743-.456 3.164-1.422 4.29-.938 1.126-2.172 1.958-3.7 2.44v.08a8.81 8.81 0 012.494.832 7.132 7.132 0 012.01 1.529 7.476 7.476 0 011.368 2.172c.322.804.51 1.716.51 2.762zM60.95 14.854c0-1.046-.403-1.824-1.207-2.306-.804-.483-2.011-.725-3.593-.725h-3.7v6.436h4.048c1.422 0 2.494-.295 3.272-.858.804-.59 1.18-1.448 1.18-2.547zm1.019 12.362c0-1.288-.483-2.2-1.448-2.682-.966-.51-2.253-.75-3.889-.75H52.45v7.132h4.237c.59 0 1.207-.053 1.824-.16a6.765 6.765 0 001.716-.537c.51-.268.938-.644 1.26-1.126.322-.483.483-1.1.483-1.877zM79.506 8.07c0 .562-.107 1.072-.322 1.555-.214.482-.51.911-.885 1.26a4.389 4.389 0 01-1.314.831c-.509.215-1.045.295-1.608.295-1.18 0-2.146-.375-2.95-1.18-.805-.777-1.18-1.716-1.18-2.789 0-.536.107-1.045.322-1.528.214-.483.51-.912.885-1.26a4.836 4.836 0 011.314-.858 4.14 4.14 0 011.635-.322c.563 0 1.1.107 1.61.295.509.214.965.482 1.313.831.376.349.67.778.885 1.26.188.51.295 1.046.295 1.61zm-7.75 6.998h7.24v21.935h-7.24V15.068zm20.327 5.363v8.394c0 1.045.187 1.796.59 2.332.402.51 1.1.778 2.145.778.349 0 .724-.027 1.126-.08.402-.054.724-.134.992-.268l.08 5.282c-.509.188-1.126.322-1.903.456-.778.134-1.529.188-2.306.188-1.475 0-2.709-.188-3.7-.563-.993-.376-1.797-.885-2.414-1.582a6.424 6.424 0 01-1.314-2.468c-.268-.965-.402-2.01-.402-3.19v-9.28h-3.46v-5.363h3.486V9.303h7.106v5.765h5.15v5.363h-5.176zm31.32 16.626c-2.038.51-4.263.75-6.677.75-2.494 0-4.8-.401-6.891-1.18-2.092-.803-3.915-1.903-5.417-3.351a15.21 15.21 0 01-3.54-5.176c-.858-2.01-1.287-4.263-1.287-6.73 0-2.494.429-4.747 1.314-6.785.858-2.038 2.065-3.754 3.593-5.175a15.875 15.875 0 015.363-3.271 19.25 19.25 0 016.651-1.154c2.467 0 4.746.376 6.865 1.127 2.118.75 3.834 1.743 5.148 3.03l-4.746 5.417c-.724-.858-1.716-1.556-2.896-2.092-1.207-.536-2.575-.804-4.103-.804-1.314 0-2.548.24-3.647.724a8.215 8.215 0 00-2.896 2.038 8.66 8.66 0 00-1.904 3.083c-.456 1.18-.697 2.494-.697 3.889 0 1.448.214 2.762.617 3.968.402 1.207 1.019 2.253 1.823 3.111a8.281 8.281 0 003.003 2.038c1.18.483 2.548.724 4.076.724.885 0 1.717-.054 2.521-.188a9.503 9.503 0 002.199-.643v-5.685h-5.953V18.58h12.871v16.518c-1.582.805-3.352 1.449-5.39 1.958zm32.501-11.102c0 1.797-.322 3.406-.965 4.88a10.886 10.886 0 01-2.655 3.701c-1.126 1.02-2.413 1.797-3.888 2.36s-3.03.831-4.72.831c-1.636 0-3.218-.268-4.693-.83-1.474-.564-2.788-1.342-3.888-2.36a11.2 11.2 0 01-2.628-3.701c-.643-1.448-.965-3.084-.965-4.88 0-1.797.322-3.406.965-4.854a10.713 10.713 0 012.628-3.647 11.06 11.06 0 013.888-2.28 13.7 13.7 0 014.693-.804c1.663 0 3.245.268 4.72.804 1.475.537 2.762 1.288 3.888 2.28 1.126.992 1.984 2.226 2.655 3.647.643 1.448.965 3.057.965 4.853zm-6.945 0c0-.697-.107-1.394-.349-2.064a5.664 5.664 0 00-1.019-1.797 5.137 5.137 0 00-1.635-1.26c-.644-.322-1.395-.483-2.253-.483-.858 0-1.609.16-2.252.483-.644.321-1.18.75-1.609 1.26a5.05 5.05 0 00-.966 1.796 6.793 6.793 0 000 4.13c.215.67.537 1.287.992 1.824.429.536.993.992 1.636 1.314.644.321 1.395.482 2.253.482.858 0 1.609-.16 2.252-.482a4.856 4.856 0 001.636-1.314 5.726 5.726 0 00.992-1.824c.215-.67.322-1.367.322-2.065zm10.619 6.758c1.368 0 2.521 1.072 2.521 2.494 0 1.448-1.18 2.52-2.521 2.52-1.368 0-2.548-1.072-2.548-2.52s1.154-2.494 2.548-2.494zm0 .402c-1.153 0-2.065.912-2.065 2.092 0 1.233.912 2.091 2.065 2.091s2.038-.885 2.038-2.091c0-1.207-.912-2.092-2.038-2.092zm-.536 3.54h-.456v-2.896h1.099c.697 0 1.019.268 1.019.831 0 .51-.322.75-.751.804l.832 1.26h-.483l-.778-1.26h-.509v1.26h.027zm0-1.61h.536c.536 0 .724-.16.724-.482 0-.268-.134-.429-.644-.429h-.59v.912h-.026z" fill="#222"></path></svg></div>
+                            <div class="uk-grid-margin uk-first-column"><img class="uk-width-xsmall" src="../assets/images/wallets/wallet-03.svg" alt="Coinbase" data-uk-svg="" hidden=""><svg width="224" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="uk-width-xsmall uk-svg"><path d="M45.158 11.192c-8.175 0-14.501 6.132-14.501 14.404C30.657 33.87 36.886 40 45.158 40c8.273 0 14.599-6.229 14.599-14.404s-6.229-14.404-14.599-14.404zm.097 22.774c-4.671 0-7.98-3.601-7.98-8.467 0-4.866 3.309-8.467 7.98-8.467 4.672 0 8.078 3.6 8.078 8.467 0 4.866-3.503 8.467-8.078 8.467zM61.508 17.42h3.99v21.995h6.521V11.68H61.51v5.742zm-47.104-.292c3.406 0 6.131 2.044 7.105 5.158h6.812c-1.265-6.618-6.715-11.192-13.917-11.192C6.326 11.192 0 17.324 0 25.596 0 33.87 6.229 40 14.501 40c7.008 0 12.555-4.477 13.82-11.192h-6.813c-.973 3.114-3.698 5.255-7.007 5.255-4.671 0-7.98-3.6-7.98-8.467 0-4.866 3.211-8.467 7.883-8.467zm169.83 5.742l-4.769-.681c-2.239-.292-3.893-1.07-3.893-2.823 0-1.946 2.141-2.92 4.963-2.92 3.115 0 5.158 1.363 5.548 3.504h6.228c-.681-5.547-4.963-8.856-11.581-8.856-6.813 0-11.387 3.503-11.387 8.467 0 4.672 2.92 7.494 8.954 8.273l4.769.68c2.336.293 3.601 1.266 3.601 2.92 0 2.239-2.239 3.115-5.353 3.115-3.796 0-5.937-1.557-6.326-3.893h-6.326c.584 5.45 4.866 9.246 12.555 9.246 7.007 0 11.776-3.212 11.776-8.76 0-4.866-3.407-7.396-8.759-8.272zM68.808.292c-2.336 0-4.185 1.752-4.185 4.088 0 2.335 1.752 4.087 4.185 4.087 2.336 0 4.185-1.752 4.185-4.087 0-2.336-1.85-4.088-4.185-4.088zM163.6 21.216c0-6.034-3.698-10.024-11.387-10.024-7.299 0-11.387 3.698-12.263 9.343h6.424c.292-2.238 2.044-3.99 5.742-3.99 3.309 0 4.866 1.46 4.866 3.212 0 2.335-2.92 2.92-6.618 3.309-4.964.584-11.095 2.238-11.095 8.662 0 4.963 3.698 8.175 9.635 8.175 4.672 0 7.494-1.947 8.954-4.964.195 2.725 2.238 4.477 5.158 4.477h3.796v-5.742H163.6V21.217zm-6.423 6.91c0 3.699-3.212 6.424-7.202 6.424-2.433 0-4.477-.973-4.477-3.212 0-2.725 3.309-3.503 6.326-3.795 2.92-.292 4.477-.876 5.353-2.142v2.726zM122.92 11.192c-3.601 0-6.618 1.46-8.759 3.99V0h-6.424v39.416h6.326v-3.6c2.141 2.627 5.256 4.184 8.857 4.184 7.786 0 13.625-6.131 13.625-14.404 0-8.272-5.937-14.404-13.625-14.404zm-.973 22.774c-4.672 0-7.981-3.601-7.981-8.467 0-4.866 3.406-8.467 8.078-8.467 4.671 0 7.98 3.6 7.98 8.467 0 4.963-3.406 8.467-8.077 8.467zM92.263 11.192c-4.185 0-6.91 1.752-8.565 4.088v-3.601h-6.423v27.737h6.423V24.331c0-4.282 2.725-7.202 6.716-7.202 3.698 0 6.034 2.628 6.034 6.423v15.864h6.423v-16.35c0-7.008-3.6-11.874-10.608-11.874zM223.747 24.72c0-7.98-5.839-13.528-13.625-13.528-8.273 0-14.404 6.229-14.404 14.404 0 8.662 6.52 14.404 14.501 14.404 6.715 0 11.971-3.99 13.333-9.635h-6.715c-.973 2.433-3.309 3.893-6.521 3.893-4.185 0-7.299-2.53-7.98-7.105h21.411V24.72zm-21.022-2.14c1.071-3.894 3.893-5.743 7.299-5.743 3.699 0 6.424 2.044 7.105 5.742h-14.404z" fill="#0052FF"></path></svg></div>
+                            <div class="uk-grid-margin"><img class="uk-width-xsmall" src="../assets/images/wallets/wallet-04.svg" alt="Trust Wallet" data-uk-svg="" hidden=""><svg width="246" height="62" fill="none" xmlns="http://www.w3.org/2000/svg" class="uk-width-xsmall uk-svg"><path d="M20.163 21.27c2.86-.217 7.091-.995 11.205-3.717 4.12 2.726 8.36 3.503 11.226 3.717-.133 5.237-.393 8.987-.808 11.748-.492 3.267-1.161 4.855-1.847 5.809-.671.931-1.563 1.562-3.327 2.537-.279.154-.576.315-.89.486h-.003c-1.213.658-2.684 1.454-4.35 2.533-1.665-1.077-3.134-1.873-4.345-2.53a119.82 119.82 0 01-.896-.488c-1.761-.975-2.65-1.605-3.318-2.536-.685-.953-1.353-2.541-1.842-5.81-.414-2.761-.673-6.512-.805-11.75z" fill="#009FE8"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M20.718 0h20.27c11.441 0 20.717 9.276 20.717 20.718v20.27c0 11.441-9.276 20.717-20.718 20.717H20.718C9.276 61.705 0 52.43 0 40.987V20.718C0 9.276 9.276 0 20.718 0zm12.593 11.452a3.032 3.032 0 00-3.886 0c-4.63 3.867-9.912 3.84-12.065 3.83h-.288a3.031 3.031 0 00-3.032 3.076c.104 6.895.38 11.876.932 15.56.551 3.68 1.418 6.365 2.912 8.447 1.512 2.105 3.448 3.275 5.31 4.305.33.183.665.365 1.004.549 1.611.875 3.336 1.812 5.403 3.294a3.031 3.031 0 003.534 0c2.069-1.483 3.796-2.42 5.41-3.297.337-.183.67-.363 1-.546 1.863-1.029 3.801-2.198 5.315-4.302 1.498-2.082 2.368-4.767 2.921-8.448.555-3.686.83-8.667.935-15.562a3.031 3.031 0 00-3.031-3.077l-.292.001c-2.17.01-7.452.036-12.082-3.83z" fill="#009FE8"></path><path d="M82.404 24.842h-6.699v-3.948h18.241v3.948h-6.698v16.986h-4.844V24.842zm16.132 3.02c.558-.778 1.305-1.366 2.242-1.765.957-.398 2.053-.598 3.289-.598v4.307a16.64 16.64 0 00-1.046-.06c-1.336 0-2.382.379-3.14 1.136-.758.738-1.137 1.854-1.137 3.35v7.596H94.08v-16.09h4.457v2.124zm22.837-2.123v16.089h-4.427v-1.915a6.347 6.347 0 01-2.213 1.615 7.128 7.128 0 01-2.781.539c-2.113 0-3.787-.608-5.023-1.824-1.236-1.216-1.854-3.02-1.854-5.413v-9.091h4.664v8.403c0 2.591 1.087 3.888 3.26 3.888 1.116 0 2.014-.36 2.692-1.077.677-.738 1.016-1.824 1.016-3.26V25.74h4.666zm7.94 16.328c-1.336 0-2.642-.16-3.917-.478-1.277-.34-2.293-.758-3.051-1.257l1.555-3.349c.718.458 1.585.837 2.602 1.136 1.017.28 2.013.419 2.99.419 1.974 0 2.961-.488 2.961-1.466 0-.458-.27-.787-.807-.986-.539-.2-1.366-.37-2.483-.509-1.315-.2-2.402-.429-3.259-.687a5.162 5.162 0 01-2.243-1.376c-.618-.658-.927-1.595-.927-2.811 0-1.017.289-1.914.867-2.692.598-.797 1.455-1.415 2.572-1.854 1.136-.438 2.472-.658 4.007-.658 1.137 0 2.263.13 3.379.39 1.137.239 2.074.577 2.812 1.016l-1.556 3.32c-1.415-.798-2.96-1.197-4.635-1.197-.997 0-1.744.14-2.243.419-.498.279-.747.638-.747 1.077 0 .498.269.846.807 1.046.538.2 1.396.389 2.572.569 1.316.219 2.392.458 3.229.717a4.74 4.74 0 012.183 1.346c.618.657.927 1.575.927 2.75 0 .998-.298 1.885-.896 2.662-.599.778-1.476 1.386-2.632 1.825-1.136.418-2.492.628-4.067.628zm19.057-1.017c-.459.339-1.027.598-1.705.778a8.888 8.888 0 01-2.093.239c-1.914 0-3.399-.489-4.456-1.466-1.037-.977-1.555-2.412-1.555-4.306v-6.609h-2.482v-3.589h2.482V22.18h4.665v3.917h4.007v3.59h-4.007v6.548c0 .678.17 1.206.508 1.585.359.359.858.539 1.496.539.737 0 1.365-.2 1.884-.599l1.256 3.29zm39.467-20.156l-6.848 20.934h-5.203l-4.606-14.175-4.755 14.175h-5.173l-6.878-20.934h5.024l4.725 14.713 4.934-14.713h4.485l4.785 14.833 4.875-14.833h4.635zm5.873 4.605c2.492 0 4.406.598 5.742 1.795 1.336 1.176 2.003 2.96 2.003 5.353v9.18h-4.366v-2.003c-.876 1.495-2.511 2.243-4.904 2.243-1.236 0-2.312-.21-3.23-.629-.897-.418-1.585-.996-2.063-1.734-.479-.738-.718-1.575-.718-2.512 0-1.495.559-2.671 1.675-3.529 1.136-.857 2.881-1.285 5.233-1.285h3.709c0-1.017-.31-1.795-.928-2.333-.618-.558-1.545-.838-2.781-.838a7.99 7.99 0 00-2.542.42c-.817.259-1.515.617-2.093 1.076l-1.675-3.26c.877-.618 1.924-1.096 3.14-1.435a14.287 14.287 0 013.798-.509zm-.359 13.427c.798 0 1.506-.179 2.124-.538.618-.378 1.056-.926 1.316-1.644v-1.645h-3.201c-1.913 0-2.87.628-2.87 1.884 0 .598.229 1.076.687 1.435.479.339 1.127.508 1.944.508zm10.533-19.288h4.664v22.19h-4.664v-22.19zm7.2 0h4.665v22.19h-4.665v-22.19zm22.96 14.205c0 .06-.029.479-.09 1.256h-12.171c.22.997.738 1.784 1.555 2.363.818.577 1.834.866 3.051.866.837 0 1.575-.12 2.213-.358a5.546 5.546 0 001.823-1.196l2.483 2.69c-1.515 1.735-3.728 2.603-6.639 2.603-1.814 0-3.419-.35-4.815-1.047-1.395-.718-2.472-1.705-3.229-2.96-.758-1.257-1.137-2.682-1.137-4.277 0-1.575.369-2.99 1.107-4.247a7.853 7.853 0 013.08-2.96c1.316-.718 2.781-1.077 4.396-1.077 1.575 0 3.001.34 4.276 1.017a7.305 7.305 0 012.991 2.93c.737 1.257 1.106 2.722 1.106 4.397zm-8.343-4.815c-1.057 0-1.944.299-2.661.898-.719.598-1.157 1.415-1.317 2.452h7.925c-.159-1.017-.598-1.825-1.316-2.423-.717-.618-1.595-.927-2.631-.927zm20.031 12.022c-.458.339-1.026.598-1.704.778a8.882 8.882 0 01-2.093.239c-1.914 0-3.399-.489-4.456-1.466-1.037-.977-1.555-2.412-1.555-4.306v-6.609h-2.482v-3.589h2.482V22.18h4.665v3.917h4.008v3.59h-4.008v6.548c0 .678.169 1.206.508 1.585.359.359.857.539 1.496.539.737 0 1.365-.2 1.884-.599l1.255 3.29z" fill="#222"></path></svg></div>
+                            <div class="uk-grid-margin uk-first-column"><img class="uk-width-xsmall" src="../assets/images/wallets/wallet-05.svg" alt="Exodus" data-uk-svg="" hidden=""><svg width="183" height="49" fill="none" xmlns="http://www.w3.org/2000/svg" class="uk-width-xsmall uk-svg"><path d="M34.218 24.221l14.21 14.21h-5.029a3.296 3.296 0 01-2.295-.957L27.906 24.221l13.253-13.28a3.112 3.112 0 012.295-.93h4.973l-14.209 14.21zM8.177 10.941a3.112 3.112 0 00-2.296-.93h-5l14.21 14.21L.88 38.431h5.028c.847 0 1.694-.356 2.295-.957l13.226-13.28L8.177 10.94zm16.477 16.532l-13.28 13.253a3.221 3.221 0 00-.93 2.295v5l14.21-14.209 14.21 14.21v-5.028a3.27 3.27 0 00-.93-2.295l-13.28-13.226zm0-6.503l13.28-13.253c.601-.602.93-1.421.93-2.296v-5L24.653 14.63 10.444.42v5.001c0 .847.329 1.694.93 2.296l13.28 13.252z" fill="url(#paint0_linear_307_127)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M154.7 7.32v29.211c-.027.465.164.93.492 1.285a1.72 1.72 0 001.257.546h.519c.492 0 .957-.191 1.285-.546.327-.356.519-.82.519-1.285V7.321h3.388v29.975a4.152 4.152 0 01-4.071 4.154h-2.596c-1.121 0-2.186-.41-2.979-1.202a4.135 4.135 0 01-1.229-2.952V7.32h3.415zm24.101-.328c2.268.055 4.099 2.186 4.099 4.482v2.705c0 .383-.246.71-.628.82l-2.815.792v-3.88a1.82 1.82 0 00-1.803-1.803c-.984 0-1.804.792-1.804 1.803v3.224c0 1.995 1.476 4.537 1.476 4.537l4.044 7.787c1.64 3.088 1.503 5.356 1.503 5.356v4.318a4.37 4.37 0 01-1.23 3.033c-.792.82-1.885 1.257-3.033 1.284h-2.131c-2.296-.137-4.099-2.022-4.099-4.318v-4.836c0-.383.246-.71.628-.82l2.815-.792v5.902c0 .984.82 1.776 1.831 1.776.983 0 1.803-.82 1.776-1.83v-3.854c0-1.967-1.476-4.59-1.476-4.59l-3.989-7.788c-1.64-3.088-1.503-5.356-1.503-5.356v-3.47c0-2.35 1.885-4.482 4.263-4.482h2.076zm-63.969 0c2.296.11 4.099 2.022 4.099 4.318v25.932c-.027 2.268-1.831 4.126-4.099 4.235h-2.596a4.293 4.293 0 01-4.235-4.235v-25.96a4.37 4.37 0 011.23-3.033c.792-.82 1.885-1.257 3.033-1.284l2.568.027zm-38.939.328l-.82 2.842a.845.845 0 01-.82.629h-5.437v10.875h5.63l-.82 2.842c-.11.355-.438.629-.82.629h-3.99v12.542h7.077l-.792 2.814a.845.845 0 01-.82.629h-8.853V7.32h10.465zm60.417 0a4.233 4.233 0 014.208 4.236v25.303c0 2.323-1.885 4.236-4.208 4.236h-6.558V7.32h6.558zM91.66 18.196L94.775 7.32h3.47L93.41 24.235l4.864 16.914h-3.47L91.66 30.246l-3.115 10.876h-3.47l4.836-16.887L85.047 7.32h3.47l3.143 10.876zm22.025 20.22a1.76 1.76 0 001.284-.573 1.79 1.79 0 00.492-1.312v-24.62a1.79 1.79 0 00-.492-1.312c-.328-.355-.793-.546-1.284-.574h-.52a1.891 1.891 0 00-1.803 1.886v24.62c0 1.011.792 1.831 1.803 1.886h.52zm21.669-.71c.956 0 1.803-.492 1.803-1.803V12.54c0-1.257-.847-1.75-1.803-1.75h-2.214v26.916h2.214z" fill="#222"></path><defs><linearGradient id="paint0_linear_307_127" x1=".865" y1="24.216" x2="30.928" y2="24.216" gradientUnits="userSpaceOnUse"><stop stop-color="#00BFFF"></stop><stop offset="1" stop-color="#6619FF"></stop></linearGradient></defs></svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src="./assets/images/divider-01.svg" alt="Divider" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 100;">
+
+            <div id="uni_whyus" class="uni-whyus uk-section uk-section-xlarge@m uk-panel">
+                <div class="uk-container">
+                    <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid uk-grid-stack" data-uk-grid="">
+                        <div class="uk-panel uk-text-center uk-first-column">
+                            <h2 class="uk-h3 uk-h1@m">Why choose us?</h2>
+                        </div>
+                    </header>
+                    <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                        <img class="uk-position-top-left uk-text-secondary" width="16" src="../assets/images/objects/circle-01.png" alt="Object" style="top: -16%; left: 8%">
+                        <img class="uk-position-bottom-right uk-text-primary" width="24" src="../assets/images/objects/circle-02.png" alt="Object" style="bottom: 16%; right: -8%">
+                        <img class="uk-position-bottom-left uk-text-muted" width="28" src="../assets/images/objects/x.png" alt="Object" style="bottom: 16%; left: -8%">
+                        <div class="uk-grid uk-child-width-1-4@s uk-flex-top uk-flex-wrap-top" data-uk-grid="masonry: true;" style="height: 506px;">
+                            <div class="uk-first-column" style="transform: translateY(0px);">
+                                <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                    <span class="uk-h3 uk-h2@m uk-text-gradient">01.</span>
+                                    <div class="uk-panel uk-margin-top">
+                                        <h3 class="uk-h5 uk-h4@m">
+                                            Huge <br>
+                                            collection
+                                        </h3>
+                                        <p class="uk-text-muted">A collection of 5,000 unique Nerkos built to go beyond the digital space that will unlock numerous benefits for our community.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="transform: translateY(0px);">
+                                <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5 uk-margin-large-top@m">
+                                    <span class="uk-h3 uk-h2@m uk-text-gradient">02.</span>
+                                    <div class="uk-panel uk-margin-top">
+                                        <h3 class="uk-h5 uk-h4@m">
+                                            High <br>
+                                            quality
+                                        </h3>
+                                        <p class="uk-text-muted">The nerko’s collection includes dozens of rare heads, costumes, and colorways of the artist's palette. They are drawn with great care.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="transform: translateY(0px);">
+                                <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                    <span class="uk-h3 uk-h2@m uk-text-gradient">03.</span>
+                                    <div class="uk-panel uk-margin-top">
+                                        <h3 class="uk-h5 uk-h4@m">
+                                            Top <br>
+                                            ressource
+                                        </h3>
+                                        <p class="uk-text-muted">Tasty design resources made with care for each pixel. Tokens, NFTs, metaverse and game resources. Access additional drops.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="transform: translateY(0px);">
+                                <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5 uk-margin-large-top@m">
+                                    <span class="uk-h3 uk-h2@m uk-text-gradient">04.</span>
+                                    <div class="uk-panel uk-margin-top">
+                                        <h3 class="uk-h5 uk-h4@m">
+                                            Big <br>
+                                            community
+                                        </h3>
+                                        <p class="uk-text-muted">Be part of a community of nerko owners and create user generated items. Rent, advertise, lounch stores, create items. We make it easy to discover.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="uni_about" class="uni-about uk-section uk-section-xlarge@m uk-panel">
+                <div class="uk-container">
+                    <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid uk-grid-stack" data-uk-grid="">
+                        <div class="uk-panel uk-text-center uk-first-column">
+                            <h2 class="uk-h3 uk-h1@m">About the plaform</h2>
+                        </div>
+                    </header>
+                    <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                        <div class="uk-grid uk-grid-2xlarge uk-grid-3xlarge@m uk-child-width-1-1 uk-grid-stack" data-uk-grid="">
+                            <div class="uk-first-column">
+                                <div class="uk-panel">
+                                    <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m" data-uk-grid="">
+                                        <div class="uk-first-column">
+                                            <div class="uk-panel uk-image-middle uk-overflow-hidden uk-radius uk-radius-large@m">
+                                                <img src="../assets/images/features-01.png" alt="Create your own NFT">
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="uk-panel">
+                                                <span class="uk-text-overline uk-text-gradient">Create and Invest</span>
+                                                <h3 class="uk-h3 uk-h1@m">Create your own NFT</h3>
+                                                <p class="uk-text-large@m">Multiple Chains, One Home. Stack up all your NFTs from across blockchains.</p>
+                                                <div class="uk-grid uk-grid-large@m uk-grid-match uk-child-width-1-2 uk-margin-large-top@m" data-uk-grid="">
+                                                    <div class="uk-first-column">
+                                                        <div class="uk-panel">
+                                                            <h5 class="uk-h4 uk-h2@m uk-margin-xsmall">4,500+</h5>
+                                                            <span class="uk-text-small@m">Collections Indexed <br>
+                                                                every 5mins.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-panel">
+                                                            <h5 class="uk-h4 uk-h2@m uk-margin-xsmall">2.5x</h5>
+                                                            <span class="uk-text-small@m">Difference in Floor &amp; Estimated Value</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-grid-margin uk-first-column">
+                                <div class="uk-panel">
+                                    <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m" data-uk-grid="">
+                                        <div class="">
+                                            <div class="uk-panel uk-image-middle uk-overflow-hidden uk-radius uk-radius-large@m">
+                                                <img src="../assets/images/features-04.png" alt="Create your own NFT">
+                                            </div>
+                                        </div>
+                                        <div class="uk-flex-first@m uk-first-column">
+                                            <div class="uk-panel">
+                                                <span class="uk-text-overline uk-text-gradient">Sync and Track</span>
+                                                <h3 class="uk-h3 uk-h1@m">Multiple Chains, One Home</h3>
+                                                <p class="uk-text-large@m">We make it easy to Discover, Invest and manage all your NFTs at one place, looked up one of the more obscure.Find the right NFT collections to buy within the platform.</p>
+                                                <div class="uk-grid uk-grid-large@m uk-grid-match uk-child-width-1-2@m uk-margin-medium-top uk-margin-large-top@m" data-uk-grid="">
+                                                    <div class="uk-first-column">
+                                                        <div class="uk-panel">
+                                                            <div class="uk-grid uk-grid-xsmall uk-grid-small@m" data-uk-grid="">
+                                                                <div class="uk-first-column">
+                                                                    <div class="uk-card uk-card-xsmall uk-radius-medium uk-radius-large@m uk-background-gradient uk-flex-middle uk-flex-center">
+                                                                        <i class="uk-icon-small uk-icon-medium@m unicon-select-02 uk-text-white"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="uk-text-small@m">Collections Indexed <br>
+                                                                        every 5mins.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="uk-panel">
+                                                            <div class="uk-grid uk-grid-xsmall uk-grid-small@m" data-uk-grid="">
+                                                                <div class="uk-first-column">
+                                                                    <div class="uk-card uk-card-xsmall uk-radius-medium uk-radius-large@m uk-background-gradient uk-flex-middle uk-flex-center">
+                                                                        <i class="uk-icon-small uk-icon-medium@m unicon-select-window uk-text-white"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="uk-text-small@m">Difference in Floor &amp; <br>
+                                                                        Estimated Value</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="uni_faq" class="uni-faq uk-section uk-section-large@m uk-panel uk-overflow-hidden uk-padding-2xlarge-bottom@m">
+                <div class="uk-container">
+                    <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-text-center uk-child-width-auto@m uk-grid uk-grid-stack" data-uk-grid="">
+                        <div class="uk-panel uk-first-column">
+                            <h2 class="uk-h3 uk-h1@m">FAQ</h2>
+                        </div>
+                    </header>
+                    <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                        <ul class="uk-card uk-card-small uk-card-large@m uk-radius uk-radius-large@m uk-width-2xlarge@m uk-margin-auto uk-box-shadow-xsmall dark:uk-background-white-5 uk-accordion" data-uk-accordion="collapsible: false">
+                            <li class="uk-open">
+                                <a class="uk-accordion-title uk-h5@m" href="#" aria-expanded="true">What is Nerko's NFT Collection?</a>
+                                <div class="uk-accordion-content uk-padding-small-bottom">
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-h5@m" href="#">How we can buy and invest NFT?</a>
+                                <div class="uk-accordion-content uk-padding-small-bottom" hidden="">
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-h5@m" href="#">Why we should choose Nerko's NFT?</a>
+                                <div class="uk-accordion-content uk-padding-small-bottom" hidden="">
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-h5@m" href="#">Where we can buy and sell NFts?</a>
+                                <div class="uk-accordion-content uk-padding-small-bottom" hidden="">
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-h5@m" href="#">How secure is this token?</a>
+                                <div class="uk-accordion-content uk-padding-small-bottom" hidden="">
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-h5@m" href="#">What is your contract address?</a>
+                                <div class="uk-accordion-content uk-padding-small-bottom" hidden="">
+                                    <p class="uk-text-small uk-text-large@m uk-text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="uni-cta uk-section uk-panel uk-overflow-hidden">
+                <div class="uk-container">
+                    <div class="uk-card uk-flex-center uk-text-center">
+                        <div class="uk-panel uk-width-2xlarge@m uk-position-z-index">
+                            <img class="uk-position-top-left" width="24" src="../assets/images/objects/circle-01.png" alt="Object" style="top: 0%; left: -16%">
+                            <img class="uk-position-bottom-right" width="24" src="../assets/images/objects/x.png" alt="Object" style="bottom: 16%; right: -8%">
+                            <img class="uk-position-top-right" width="40" src="../assets/images/objects/ethereum-02.png" alt="Object" style="top: 0%; right: -16%">
+                            <img class="uk-position-bottom-left" width="48" src="../assets/images/objects/bitcoin-01.png" alt="Object" style="bottom: 16%; left: -8%">
+                            <h2 class="uk-h3 uk-heading-d2@m">We make it easy to Discover</h2>
+                            <p class="uk-text-xlarge@m">Invest and manage all your NFTs at one place.</p>
+                            <a href="#" class="uk-button uk-button-small uk-button-large@m uk-button-gradient uk-margin-small-top uk-margin-large-top@m">Join community</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </div>
+
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer class="uni-footer uk-section uk-section-xlarge@m uk-panel">
+            <div class="uk-position-cover uk-background-cover uk-visible@m" data-src="./assets/images/footer-bg.png" data-uk-img></div>
+            <div class="uk-container">
+                <div class="uk-panel">
+                    <div class="uk-grid uk-flex-center uk-text-center" data-uk-grid>
+                        <div class="uk-width-large@m">
+                            <div class="uk-panel uk-position-z-index">
+                                <ul class="uk-subnav uk-subnav-small uk-flex-center uk-text-gray-70">
+                                    <li>
+                                        <a href="https://twitter.com/unistudioco"><span class="uk-icon uk-icon-large@m unicon-logo-twitter"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.com/unistudioco"><span class="uk-icon uk-icon-large@m unicon-logo-discord"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://instagram.com/unistudioco"><span class="uk-icon uk-icon-large@m unicon-logo-instagram"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://facebook.com/unistudioco"><span class="uk-icon uk-icon-large@m unicon-logo-facebook"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/unistudioco"><span class="uk-icon uk-icon-large@m unicon-logo-youtube"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-panel uk-text-small uk-margin-medium-top">
+                        <div class="uk-grid uk-child-width-1-1@m uk-flex-center uk-text-center" data-uk-grid>
+                            <div>
+                                <ul class="uk-subnav uk-text-muted uk-flex-center">
+                                    <li><a href="privacy.html">Privacy</a></li>
+                                    <li><a href="terms.html">Terms of use</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="uk-text-muted">© 2022 Nerko. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer end -->
+
+        <!-- include scripts -->
+        <script defer src="./assets/js/jquery.min.js"></script>
+        <script defer src="./assets/js/swiper-bundle.min.js"></script>
+        <script defer src="./assets/js/feather.min.js"></script>
+        <script defer src="./assets/js/typed.min.js"></script>
+        <script defer src="./assets/js/anime.min.js"></script>
+        <script defer src="./assets/js/app.js"></script>
+        <script defer src="./assets/js/swiper-helper.js"></script>
+        <script defer src="./assets/js/typed-helper.js"></script>
+        <script defer src="./assets/js/anime-helper.js"></script>
+        <script defer src="./assets/js/anime-helper-defined-timelines.js"></script>
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                document.documentElement.classList.add("uk-dark");
+                localStorage.setItem("darkMode", "1");
+            } else if (getSchema === "light") {
+                document.documentElement.classList.remove("uk-dark");
+                localStorage.setItem("darkMode", "0");
+            }
+        </script>
+    </body>
+</html>
